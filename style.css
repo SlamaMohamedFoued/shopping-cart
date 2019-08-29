@@ -1,0 +1,52 @@
+body {
+    background-color: #7EC855;
+}
+
+.container {
+    background-color: white;
+    width: 900px;
+    border-radius: 7px;
+    margin: 150px auto;
+}
+
+.bagTotal {
+    font-size: 20px;
+    padding: 18px 15px 0px;
+    margin-bottom: 0px;
+}
+
+.productColor {
+    color: #615d5d;
+}
+
+.productType {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.count {
+    margin: 5px;
+}
+
+.liked {
+    color: red;
+}
+
+
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        background-color: white;
+        width: 900px;
+        border-radius: 0px;
+        margin: 0px auto;
+    }
+}

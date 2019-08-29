@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex h-100 align-items-center justify-content-center">
+    <div class="container">
+        <div class="cardTop row">
+            <p class="bagTotal col-lg-12">Shopping bag total: <span id="total"></span> $</p>
+        </div>
+        <hr style="margin-left: -14px; width: 103%;">
+        <div class=" cardItem row d-flex align-items-center justify-content-center">
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <i class="fas fa-times fa-2x image"></i>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <i class="fas fa-heart fa-2x image heart1" onclick="Like('.heart1')"></i>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-1 ">
+                <img src="https://i.pinimg.com/originals/84/9a/6e/849a6ee89b57703583c64aa41f2aa9e6.jpg"
+                    class="productImage" alt="" height="100px;" class="image">
+            </div>
+            <div class="col-lg-1 col-lg-1 col-md-1 d-flex justify-content-center align-items-center">
+                <div>
+                    <p class="productType">Sneakers</p>
+                    <p class="productColor">White/Black</p>
+                    <p><span class="firstProductPrice">35</span> $</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-4 col-md-4">
+                <center>
+                    <i class="far fa-plus-square fa-2x" onclick="incrementFirst(true),total()"></i>
+                    <span class="numberFirstProduct count"></span>
+                    <i class="far fa-minus-square fa-2x" onclick="incrementFirst(false),total()"></i>
+                </center>
+            </div>
+            <div class="col-lg-2 col-lg-2 col-md-2 d-flex align-items-center justify-content-center">
+                <p><span class="totalPriceItem1">0</span> $</p>
+            </div>
+        </div>
+        <hr style="margin-left: -14px; width: 103%;">
+        <div class=" cardItem row d-flex align-items-center justify-content-center">
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <i class="fas fa-times fa-2x image"></i>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <i class="fas fa-heart fa-2x image heart2" onclick="Like('.heart2')"></i>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-1 ">
+                <img src="https://i.pinimg.com/originals/84/9a/6e/849a6ee89b57703583c64aa41f2aa9e6.jpg"
+                    class="productImage" alt="" height="100px;" class="image">
+            </div>
+            <div class="col-lg-1 col-lg-1 col-md-1 d-flex justify-content-center align-items-center">
+                <div>
+                    <p class="productType">Sneakers</p>
+                    <p class="productColor">White/Black</p>
+                    <p><span class="secondProductPrice">45</span> $</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-4 col-md-4">
+                <center>
+                    <i class="far fa-plus-square fa-2x" onclick="incrementSecond(true),total()"></i>
+                    <span class="numberSecondProduct count"></span>
+                    <i class="far fa-minus-square fa-2x" onclick="incrementSecond(false),total()"></i>
+                </center>
+            </div>
+            <div class="col-lg-2 col-lg-2 col-md-2 d-flex align-items-center justify-content-center">
+                <p><span class="totalPriceItem2">0</span> $</p>
+            </div>
+        </div>
+        <hr style="margin-left: -14px; width: 103%;">
+        <div class=" cardItem3 row d-flex align-items-center justify-content-center" style="margin-bottom: 15px;">
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <i class="fas fa-times fa-2x image" onclick="supprimer()"></i>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <i class="fas fa-heart fa-2x image heart3" onclick="Like('.heart3')"></i>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-1 ">
+                <img src="https://i.pinimg.com/originals/84/9a/6e/849a6ee89b57703583c64aa41f2aa9e6.jpg"
+                    class="productImage" alt="" height="100px;" class="image">
+            </div>
+            <div class="col-lg-1 col-lg-1 col-md-1 d-flex justify-content-center align-items-center">
+                <div>
+                    <p class="productType">Sneakers</p>
+                    <p class="productColor">White/Black</p>
+                    <p><span class="thirdProductPrice">40</span> $</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-4 col-md-4">
+                <center>
+                    <i class="far fa-plus-square fa-2x" onclick="incrementThird(true),total()"></i>
+                    <span class="numberThirdProduct count"></span>
+                    <i class="far fa-minus-square fa-2x" onclick="incrementThird(false),total()"></i>
+                </center>
+            </div>
+            <div class="col-lg-2 col-lg-2 col-md-2 d-flex align-items-center justify-content-center">
+                <p><span class="totalPriceItem3">0</span> $</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
